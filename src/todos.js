@@ -1,7 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { useState, useEffect } from 'react';
 
-export default function todos() {
+
+const [todos, setTodos] = useState([]);
+
+export default function Todos() {
+
+    useEffect(() => {
+        let data = getLocalStorage(todos);
+        if (data.length > 0) {
+          setTodos(data);
+        } else {
+          getData(todos)
+            .then((data) => {
+              setTodos(data);
+              setLocalStorage(todos, data);
+            })
+        }
+      }, []);
+
   return (
-    <div>todos</div>
+    <div>todos here</div>
   )
 }
