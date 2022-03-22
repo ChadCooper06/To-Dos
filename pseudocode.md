@@ -21,7 +21,7 @@ create the components
 
     - INPUT box
         - takes in keyboard input and then sends that info (as an object) to the State(app) and local storage
-        - uses an onSubmit to take the value, turn it into an object and set it to state
+        - uses an onSubmit to take the value, turn it into an object and set it to state, conditional render to the screen
         - the new item is given a unique ID and added to the item array of state
         - the input box becomes cleared upon submit
     - ITEM BOX
