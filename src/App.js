@@ -1,9 +1,10 @@
 import React from "react";
+import Paper from "./paper";
 
-function App(props) {
+function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      <Paper />
     </div>
   );
 }
