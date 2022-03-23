@@ -1,11 +1,9 @@
-export function getLocalStorage() {
-    return(
+export function getLocalStorage(todoName) {
+    const saved = localStorage.getItem(todos);
+    return saved && saved.length > 0 ? JSON.parse(saved): [];
 
-    )
 }
 
-export function setLocalStorage() {
-    return(
-        
-    )
+export function setLocalStorage(todoName, todos) {
+    return localStorage.setItem(todoName, JSON.stringify(todos));
 }
